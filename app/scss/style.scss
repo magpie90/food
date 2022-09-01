@@ -1,9 +1,78 @@
-
 @import 'reset';
 @import 'vars';
 @import 'fonts';
 @import 'global';
 
+.header {
+  padding: 60px 0;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__inner {
+    display: flex;
+  }
+  &__items {
+    display: flex;
+  }
+  &__user{
+    display: flex;
+  }
+  &__link {
+    font-size: 18px;
+    transition: all .4s;
+    &:hover {
+      color: $accent;
+    }
+  }
+  &__link--active {
+    color: $accent;
+  }
+  &__btn {
+    position: relative;
+    display: block;
+    width: 28px;
+    height: 23px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .4s;
+    z-index: 2;
+    &:hover {
+      background-color: $accent;
+      z-index: 1;
+      box-shadow: 0 0 0 1px rgb(255 104 56);
+      border-radius: 2px;
+    }
+
+  }
+   &__num {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: -4px;
+    left: 17px;
+    border-radius: 50%;
+    background-color: $accent;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    line-height: 15px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 45px;
+  }
+  &__items:not(:last-child) {
+    margin-right: 63px;
+  }
+
+  &__item-user:not(:last-child) {
+    margin-right: 35px;
+  }
+
+}
 
 
 @import 'media';
